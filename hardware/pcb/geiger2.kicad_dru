@@ -1,0 +1,13 @@
+(version 1)
+# Copied/adapted from ~/enzo/x.drop-beacon/pcb/beacon.kicad_dru
+# Target fab: JLCPCB FR4, 2-layer, 1 oz copper.
+# General 6 mil (0.1524 mm) floor — above JLCPCB's 0.10 mm limit for 1 oz two-layer.
+
+(rule "Normal routing minimum"
+ (constraint track_width (min 0.1524mm))
+ (constraint connection_width (min 0.1524mm)))
+
+# Unpopulated parts: keep solder-mask access, no stencil paste.
+(rule "No paste on DNP components"
+ (condition "A.Do_not_Populate")
+ (constraint solder_paste_abs_margin (opt -50mm)))
