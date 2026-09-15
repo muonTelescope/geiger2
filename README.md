@@ -12,7 +12,7 @@ informs requirements; it is not a port. See [docs/prior-art.md](docs/prior-art.m
 
 | Area | Decision |
 |---|---|
-| MCU / radio | nRF52 (or similar Nordic BLE SoC) — real BLE advertising, not nRF24 fakery |
+| MCU / radio | **nRF52832-QFAA-R** (LCSC C77540) bare + **PCB inverted-F antenna** — see [docs/mcu-rev-a.md](docs/mcu-rev-a.md) |
 | Detector | CTC-5 / STS-5 halogen-quenched GM tube (NOS Russian), same marking as stock on hand |
 | HV | Regulated bias + **ADC readback** of tube voltage (fix the open-loop V6 gap) |
 | Fab | JLCPCB **2-layer** FR4; DRC from x.drop beacon **0.8.6 JLC-preferred** pack (not git master) — [docs/jlcpcb-drc.md](docs/jlcpcb-drc.md) |
@@ -46,9 +46,8 @@ battery → 3.3 V regulator → nRF52
 nRF52 → BLE ADV (device id, CPM, optional HV mV)
 ```
 
-Open questions for schematic rev A: exact nRF52 module vs bare chip + antenna,
-HV topology (free-running boost vs dedicated controller), battery chemistry,
-and mechanical tube mount.
+Locked: bare nRF52832 + PCB antenna, 2×AA with beacon clips.
+Open: HV topology details, CTC-5 tube clip MPN, RF match BOM after layout.
 
 ## Repo layout
 
@@ -68,5 +67,5 @@ Match x.drop beacon order defaults unless we document a change:
 
 ## Status
 
-Bootstrap: README, prior-art extract, JLCPCB DRC seed (beacon 0.8.6 mins).
-Schematic / layout / firmware not started yet.
+MCU locked: nRF52832-QFAA-R + PCB antenna + pin budget ([docs/mcu-rev-a.md](docs/mcu-rev-a.md)).
+AA clips: beacon MY-ZJ-3030 / MY-AA-03. Schematic / HV / tube clips next.
