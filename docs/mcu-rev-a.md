@@ -69,3 +69,10 @@ Fixed / non-GPIO (schematic only): `VDD`, `VSS`, `DEC1`–`DEC4`, `DCC`, `ANT`, 
 ## Skills path
 
 User asked for `~/agent-skills`. That path did not exist; linked to `~/.codex/skills` (KiCad BOM / schematic / PCB / gerbers / footprint skills). Prefer LCSC field name **`LCSC`** on symbols for JLC BOM export (`kicad-bom` skill).
+
+
+## Product locks (rev A)
+
+- **BLE:** advertising **plus** connectable GATT (config/telemetry), not ads-only.
+- **Mechanics:** closed plastic **handheld shell** — antenna keepout must account for hand and enclosure; shell CAD later.
+- **Defaults:** status LED only; raw CPM in ads/GATT (µSv/h later); alkaline 2×AA floor; TC2030-style SWD.
