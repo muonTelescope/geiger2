@@ -1,0 +1,30 @@
+{
+  "status": "mechanical concept; no routed PCB or DRC certification",
+  "board_envelope_mm": [
+    140,
+    48,
+    1.6
+  ],
+  "tube_envelope_mm": [
+    110,
+    12
+  ],
+  "aa_envelope_mm": [
+    50.5,
+    14.5
+  ],
+  "fallbacks": [
+    "CTC-5 cylinder",
+    "AA bodies",
+    "battery contacts",
+    "tube supports",
+    "HV parts envelopes"
+  ],
+  "source_mesh": "cad/models/NRF52832-QFAA-C77540.obj",
+  "views": [
+    "hero",
+    "top",
+    "tube",
+    "profile"
+  ]
+}

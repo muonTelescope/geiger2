@@ -1,0 +1,18 @@
+{
+  "name": "geiger2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sim:hv": "tsci simulate analog sim/hv/hv.circuit.tsx --disable-parts-engine",
+    "sim:native": "python3 scripts/simulate_hv.py",
+    "sim:sync": "python3 scripts/sync_spice_model.py",
+    "render:concept": "blender --background --python scripts/render_concept.py",
+    "build:schematic": "tsci build board/hv-ladder.circuit.tsx --disable-pcb --disable-parts-engine --schematic-svgs"
+  },
+  "dependencies": {
+    "circuit-json": "0.0.491",
+    "circuit-json-to-pnp-csv": "0.0.16",
+    "format-si-unit": "0.0.14",
+    "tscircuit": "0.0.2562"
+  }
+}

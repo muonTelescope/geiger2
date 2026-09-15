@@ -1,0 +1,541 @@
+{
+  "queried": "2026-09-15",
+  "source": "pcbparts.dev local JLC database; not live order-time stock",
+  "parts": [
+    {
+      "query": {
+        "mpn": "1206W4F3305T5E"
+      },
+      "result": {
+        "error": "No JLCPCB parts found for MPN '1206W4F3305T5E'",
+        "mpn": "1206W4F3305T5E",
+        "results": []
+      }
+    },
+    {
+      "query": {
+        "lcsc": "C20345924"
+      },
+      "result": {
+        "lcsc": "C20345924",
+        "model": "TLV3012BIDBVR",
+        "manufacturer": "Texas Instruments",
+        "package": "SOT-23-6",
+        "stock": 3096,
+        "price": 2.8186,
+        "price_10": 2.4281,
+        "library_type": "extended",
+        "preferred": false,
+        "category": "Amplifiers/Comparators",
+        "subcategory": "Comparators",
+        "subcategory_id": 3030,
+        "mounting_type": "smd",
+        "specs": {
+          "Operating Temperature": "-40℃~+125℃",
+          "Vos - Input Offset Voltage": "300uV",
+          "Output Type": "Push-pull",
+          "Input Offset Current(Ios)": "1pA",
+          "Input Offset Voltage Drift(Vos TC)": "12uV/℃",
+          "Single Supply": "1.65V~5.5V",
+          "Input Hysteresis Voltage (Vhys)": "8mV",
+          "Response Time (tr)": "10ns",
+          "Common Mode Rejection Ratio(CMRR)": "74dB",
+          "Rail to Rail": "Rail-to-rail input",
+          "Number of Channels": "1",
+          "Quiescent Current": "2.4uA",
+          "Ib - Input Bias Current": "4.5pA",
+          "Propagation Delay Time": "4us",
+          "Output Mode": "CMOS"
+        },
+        "description": "-40℃~+125℃ 1 1.65V~5.5V 10ns 12uV/℃ 1pA 2.4uA 300uV 4.5pA 4us 74dB 8mV CMOS Push-pull Rail-to-rail input SOT-23-6 Comparators ROHS",
+        "min_order": 1,
+        "reel_qty": 3000,
+        "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2403281333_Texas-Instruments-TLV3012BIDBVR_C20345924.pdf",
+        "lcsc_url": "https://www.lcsc.com/product-detail/comparators_texas-instruments-tlv3012bidbvr_C20345924.html",
+        "prices": [
+          {
+            "qty": "1+",
+            "price": 2.8186
+          },
+          {
+            "qty": "10+",
+            "price": 2.4281
+          },
+          {
+            "qty": "30+",
+            "price": 2.184
+          },
+          {
+            "qty": "100+",
+            "price": 1.935
+          },
+          {
+            "qty": "500+",
+            "price": 1.8211
+          },
+          {
+            "qty": "1000+",
+            "price": 1.7722
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Operating Temperature",
+            "value": "-40℃~+125℃"
+          },
+          {
+            "name": "Vos - Input Offset Voltage",
+            "value": "300uV"
+          },
+          {
+            "name": "Output Type",
+            "value": "Push-pull"
+          },
+          {
+            "name": "Input Offset Current(Ios)",
+            "value": "1pA"
+          },
+          {
+            "name": "Input Offset Voltage Drift(Vos TC)",
+            "value": "12uV/℃"
+          },
+          {
+            "name": "Single Supply",
+            "value": "1.65V~5.5V"
+          },
+          {
+            "name": "Input Hysteresis Voltage (Vhys)",
+            "value": "8mV"
+          },
+          {
+            "name": "Response Time (tr)",
+            "value": "10ns"
+          },
+          {
+            "name": "Common Mode Rejection Ratio(CMRR)",
+            "value": "74dB"
+          },
+          {
+            "name": "Rail to Rail",
+            "value": "Rail-to-rail input"
+          },
+          {
+            "name": "Number of Channels",
+            "value": "1"
+          },
+          {
+            "name": "Quiescent Current",
+            "value": "2.4uA"
+          },
+          {
+            "name": "Ib - Input Bias Current",
+            "value": "4.5pA"
+          },
+          {
+            "name": "Propagation Delay Time",
+            "value": "4us"
+          },
+          {
+            "name": "Output Mode",
+            "value": "CMOS"
+          }
+        ],
+        "has_easyeda_footprint": null,
+        "easyeda_symbol_uuid": null,
+        "easyeda_footprint_uuid": null
+      }
+    },
+    {
+      "query": {
+        "lcsc": "C342714"
+      },
+      "result": {
+        "lcsc": "C342714",
+        "model": "C3216C0G2J103JT000N",
+        "manufacturer": "TDK",
+        "package": "1206",
+        "stock": 2413,
+        "price": 0.3883,
+        "price_10": 0.3198,
+        "library_type": "extended",
+        "preferred": false,
+        "category": "Capacitors",
+        "subcategory": "Multilayer Ceramic Capacitors MLCC - SMD/SMT",
+        "subcategory_id": 2929,
+        "mounting_type": "smd",
+        "specs": {
+          "Voltage Rating": "630V",
+          "Tolerance": "±5%",
+          "Capacitance": "10nF",
+          "Temperature Coefficient": "C0G"
+        },
+        "description": "10nF 630V C0G ±5% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+        "min_order": 1,
+        "reel_qty": 2000,
+        "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_TDK-C3216C0G2J103JT000N_C342714.pdf",
+        "lcsc_url": "https://www.lcsc.com/product-detail/multilayer-ceramic-capacitors-mlcc-smd-smt_tdk-c3216c0g2j103jt000n_C342714.html",
+        "prices": [
+          {
+            "qty": "1+",
+            "price": 0.3883
+          },
+          {
+            "qty": "50+",
+            "price": 0.3198
+          },
+          {
+            "qty": "150+",
+            "price": 0.2904
+          },
+          {
+            "qty": "500+",
+            "price": 0.2536
+          },
+          {
+            "qty": "2000+",
+            "price": 0.2289
+          },
+          {
+            "qty": "4000+",
+            "price": 0.2191
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Voltage Rating",
+            "value": "630V"
+          },
+          {
+            "name": "Tolerance",
+            "value": "±5%"
+          },
+          {
+            "name": "Capacitance",
+            "value": "10nF"
+          },
+          {
+            "name": "Temperature Coefficient",
+            "value": "C0G"
+          }
+        ],
+        "has_easyeda_footprint": null,
+        "easyeda_symbol_uuid": null,
+        "easyeda_footprint_uuid": null
+      }
+    },
+    {
+      "query": {
+        "lcsc": "C2041861"
+      },
+      "result": {
+        "lcsc": "C2041861",
+        "model": "B82442T1105K050",
+        "manufacturer": "TDK",
+        "package": "SMD,5.6x5mm",
+        "stock": 1973,
+        "price": 0.6445,
+        "price_10": 0.5224,
+        "library_type": "extended",
+        "preferred": false,
+        "category": "Inductors, Coils, Chokes",
+        "subcategory": "Inductors (SMD)",
+        "subcategory_id": 2936,
+        "mounting_type": "smd",
+        "specs": {
+          "Inductance": "1mH",
+          "Current - Saturation (Isat)": "310mA",
+          "Q @ Frequency": "30@252kHz",
+          "Frequency - Self Resonant": "1.8MHz",
+          "Tolerance": "±10%",
+          "Current Rating": "150mA",
+          "DC Resistance(DCR)": "9.5Ω"
+        },
+        "description": "1.8MHz 150mA 1mH 30@252kHz 310mA 9.5Ω ±10% SMD,5.6x5mm Inductors (SMD) ROHS",
+        "min_order": 1,
+        "reel_qty": 1500,
+        "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2108040730_TDK-B82442T1105K050_C2041861.pdf",
+        "lcsc_url": "https://www.lcsc.com/product-detail/inductors-smd_tdk-b82442t1105k050_C2041861.html",
+        "prices": [
+          {
+            "qty": "1+",
+            "price": 0.6445
+          },
+          {
+            "qty": "10+",
+            "price": 0.5224
+          },
+          {
+            "qty": "30+",
+            "price": 0.4606
+          },
+          {
+            "qty": "100+",
+            "price": 0.4004
+          },
+          {
+            "qty": "500+",
+            "price": 0.3646
+          },
+          {
+            "qty": "1500+",
+            "price": 0.345
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Inductance",
+            "value": "1mH"
+          },
+          {
+            "name": "Current - Saturation (Isat)",
+            "value": "310mA"
+          },
+          {
+            "name": "Q @ Frequency",
+            "value": "30@252kHz"
+          },
+          {
+            "name": "Frequency - Self Resonant",
+            "value": "1.8MHz"
+          },
+          {
+            "name": "Tolerance",
+            "value": "±10%"
+          },
+          {
+            "name": "Current Rating",
+            "value": "150mA"
+          },
+          {
+            "name": "DC Resistance(DCR)",
+            "value": "9.5Ω"
+          }
+        ],
+        "has_easyeda_footprint": null,
+        "easyeda_symbol_uuid": null,
+        "easyeda_footprint_uuid": null
+      }
+    },
+    {
+      "query": {
+        "lcsc": "C77540"
+      },
+      "result": {
+        "lcsc": "C77540",
+        "model": "NRF52832-QFAA-R",
+        "manufacturer": "Nordic Semicon",
+        "package": "QFN-48-EP_6x6",
+        "stock": 25901,
+        "price": 4.0066,
+        "price_10": 3.5216,
+        "library_type": "extended",
+        "preferred": false,
+        "category": "RF and Wireless",
+        "subcategory": "RF Transceiver ICs",
+        "subcategory_id": 3048,
+        "mounting_type": "smd",
+        "specs": {
+          "Operating Temperature": "-40℃~+85℃",
+          "Frequency Range": "-",
+          "Type": "transceiver",
+          "Sensitivity": "-96dBm",
+          "Output Power": "4dBm",
+          "Data Rate": "2Mbps",
+          "Applications": "Bluetooth",
+          "Voltage - Supply": "1.7V~3.6V",
+          "Receive Current": "5.4mA",
+          "Typical Application Frequency": "2.4GHz",
+          "Current Of Transmitting": "5.3mA",
+          "Interface": "SPI、UART、I2C"
+        },
+        "description": "-40℃~+85℃ -96dBm 1.7V~3.6V 2.4GHz 2Mbps 4dBm 5.3mA 5.4mA Bluetooth SPI、UART、I2C transceiver QFN-48-EP(6x6) RF Transceiver ICs ROHS",
+        "min_order": 1,
+        "reel_qty": 3000,
+        "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1810010217_Nordic-Semicon-NRF52832-QFAA-R_C77540.pdf",
+        "lcsc_url": "https://www.lcsc.com/product-detail/rf-transceiver-ics_nordic-semicon-nrf52832-qfaa-r_C77540.html",
+        "prices": [
+          {
+            "qty": "1+",
+            "price": 4.0066
+          },
+          {
+            "qty": "10+",
+            "price": 3.5216
+          },
+          {
+            "qty": "30+",
+            "price": 3.2759
+          },
+          {
+            "qty": "100+",
+            "price": 2.8235
+          },
+          {
+            "qty": "500+",
+            "price": 2.7031
+          },
+          {
+            "qty": "1000+",
+            "price": 2.6526
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Operating Temperature",
+            "value": "-40℃~+85℃"
+          },
+          {
+            "name": "Frequency Range",
+            "value": "-"
+          },
+          {
+            "name": "Type",
+            "value": "transceiver"
+          },
+          {
+            "name": "Sensitivity",
+            "value": "-96dBm"
+          },
+          {
+            "name": "Output Power",
+            "value": "4dBm"
+          },
+          {
+            "name": "Data Rate",
+            "value": "2Mbps"
+          },
+          {
+            "name": "Applications",
+            "value": "Bluetooth"
+          },
+          {
+            "name": "Voltage - Supply",
+            "value": "1.7V~3.6V"
+          },
+          {
+            "name": "Receive Current",
+            "value": "5.4mA"
+          },
+          {
+            "name": "Typical Application Frequency",
+            "value": "2.4GHz"
+          },
+          {
+            "name": "Current Of Transmitting",
+            "value": "5.3mA"
+          },
+          {
+            "name": "Interface",
+            "value": "SPI、UART、I2C"
+          }
+        ],
+        "has_easyeda_footprint": null,
+        "easyeda_symbol_uuid": null,
+        "easyeda_footprint_uuid": null
+      }
+    },
+    {
+      "query": {
+        "lcsc": "C155214"
+      },
+      "result": {
+        "lcsc": "C155214",
+        "model": "BAV21W-7-F",
+        "manufacturer": "Diodes Incorporated",
+        "package": "SOD-123",
+        "stock": 39726,
+        "price": 0.0464,
+        "price_10": 0.038,
+        "library_type": "extended",
+        "preferred": false,
+        "category": "Diodes",
+        "subcategory": "Switching Diodes",
+        "subcategory_id": 2952,
+        "mounting_type": "smd",
+        "specs": {
+          "Voltage - Forward(Vf@If)": "1.25V@200mA",
+          "Non-Repetitive Peak Forward Surge Current": "-",
+          "Voltage - DC Reverse(Vr)": "200V",
+          "Operating Junction Temperature Range": "-65℃~+150℃",
+          "Reverse Recovery Time (trr)": "50ns",
+          "Diode Configuration": "Standalone",
+          "Current - Rectified": "200mA",
+          "Pd - Power Dissipation": "250mW",
+          "Reverse Leakage Current (Ir)": "100nA"
+        },
+        "description": "-65℃~+150℃@(Tj) 1.25V@200mA 100nA 200V 200mA 250mW 50ns Standalone SOD-123 Switching Diodes ROHS",
+        "min_order": 1,
+        "reel_qty": 3000,
+        "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1807271839_Diodes-Incorporated-BAV21W-7-F_C155214.pdf",
+        "lcsc_url": "https://www.lcsc.com/product-detail/switching-diodes_diodes-incorporated-bav21w-7-f_C155214.html",
+        "prices": [
+          {
+            "qty": "1+",
+            "price": 0.0464
+          },
+          {
+            "qty": "200+",
+            "price": 0.038
+          },
+          {
+            "qty": "600+",
+            "price": 0.0332
+          },
+          {
+            "qty": "3000+",
+            "price": 0.0264
+          },
+          {
+            "qty": "9000+",
+            "price": 0.024
+          },
+          {
+            "qty": "21000+",
+            "price": 0.0227
+          }
+        ],
+        "attributes": [
+          {
+            "name": "Voltage - Forward(Vf@If)",
+            "value": "1.25V@200mA"
+          },
+          {
+            "name": "Non-Repetitive Peak Forward Surge Current",
+            "value": "-"
+          },
+          {
+            "name": "Voltage - DC Reverse(Vr)",
+            "value": "200V"
+          },
+          {
+            "name": "Operating Junction Temperature Range",
+            "value": "-65℃~+150℃"
+          },
+          {
+            "name": "Reverse Recovery Time (trr)",
+            "value": "50ns"
+          },
+          {
+            "name": "Diode Configuration",
+            "value": "Standalone"
+          },
+          {
+            "name": "Current - Rectified",
+            "value": "200mA"
+          },
+          {
+            "name": "Pd - Power Dissipation",
+            "value": "250mW"
+          },
+          {
+            "name": "Reverse Leakage Current (Ir)",
+            "value": "100nA"
+          }
+        ],
+        "has_easyeda_footprint": null,
+        "easyeda_symbol_uuid": null,
+        "easyeda_footprint_uuid": null
+      }
+    }
+  ]
+}

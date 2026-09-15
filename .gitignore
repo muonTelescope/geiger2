@@ -22,3 +22,14 @@ firmware/**/build/
 .idea/
 .vscode/
 *.swp
+
+# Reproducible analysis intermediates
+node_modules/
+build/
+wave.txt
+metrics.txt
+*.blend1
+__pycache__/
+
+# tscircuit generated intermediates
+dist/
