@@ -64,6 +64,44 @@ At 4.02 µA total load, 10 kHz and 10 nF, these estimate 2.01 V sag and
 0.402 V ripple. **Burst-mode ripple must come from the transient simulation**;
 these equations assume continuous drive and do not predict comparator hysteresis.
 
+## tscircuit analog simulation
+
+![tscircuit analog simulation and native comparison](tsci-comparison.png)
+
+Actual `tsci simulate analog` result: **849,452 adaptive points over 150 ms**, at
+2.4 V input / 1 µA external load. It crosses 396 V at **47.020 ms**. In the
+100–150 ms measurement window the mean is **399.267 V**, the range is
+**394.051–402.112 V**, and modeled input current is **0.866 mA**. Maximum switch
+voltage is **103.091 V**. [Machine-readable metrics](tsci-results.json) and
+[sampled trace](tsci-trace.npz) are versioned.
+
+The native and WASM startup curves agree closely. Native first-crossing metrics
+use adaptive samples (46.820 ms); its 10 µs plot trace first crosses at 47.230 ms
+because it misses an earlier narrow peak. WASM has deeper transient dips than the
+Gear-integrated native result. **Numerical ripple/peak convergence is not yet
+established**; do not use one solver's cleaner waveform as proof of hardware ripple.
+
+The CLI emits ignored internal-node `.ic` and voltage-source probe warnings when
+padding a custom `.subckt`. Per-element initial conditions remain in the model;
+the requested HV/switch/sense outputs and battery current are present. Preserve
+[the actual CLI run log](tsci-run.log); do not silently filter its warnings.
+
+The simulation uses a five-port schematic macro for the full exploratory supply.
+That macro's SOIC footprint is only a simulation placeholder, not a physical
+HV module or an assembly part. The separate detailed ladder drawing below is
+checked against the same source netlist.
+
+## HV ladder review schematic
+
+![tscircuit HV ladder schematic](ladder-schematic.png)
+
+[Vector schematic](ladder-schematic.svg) · [tscircuit source](../../board/hv-ladder.circuit.tsx).
+U1 represents the switched-node drive; it is not an actual IC selection. S4 is
+HV output. `scripts/check_hv_schematic.py` checks the built circuit's connectivity,
+including diode polarity, and all divider/capacitor values against `converter.cir`.
+It passes for 23 components and 14 nets. This is a subsystem review drawing, not
+a completed MCU/pulse-front-end schematic or ERC/DRC fabrication release.
+
 ## Native ngspice sweep
 
 ![Startup and regulation](startup.png)
@@ -101,9 +139,20 @@ reported efficiency is not a measured or worst-case converter efficiency.
 ```sh
 bun install --frozen-lockfile
 bun run sim:sync
-bun run sim:hv                   # tscircuit CLI / WebAssembly ngspice
+bun run sim:hv                   # actual tscircuit CLI / WASM, table saved as gzip
+python3 scripts/analyze_tsci.py  # validate CLI data and regenerate comparison plot
+bun run build:schematic
+python3 scripts/check_hv_schematic.py
+rsvg-convert -w 2400 dist/board/hv-ladder/schematic.svg -o docs/hv/ladder-schematic.png
 python3 scripts/simulate_hv.py   # supplemental native ngspice sweep + plots
 ```
+
+`sim:hv` invokes the installed tscircuit CLI with a small Bun preload that saves
+its full result table losslessly to `build/tsci/hv-table.txt.gz`. It changes output
+serialization only; the solver and generated circuit are unchanged. Use
+`bun run sim:hv:plain` for the unmodified terminal table. At this run size the
+plain table is hundreds of MB. The pinned lockfile also includes explicit CLI
+dependencies needed to resolve upstream packaging/export mismatches.
 
 Python requires NumPy and Matplotlib; native sweep requires ngspice. Intermediate
 adaptive data, run decks and logs are in ignored `build/hv/`; figures and summary

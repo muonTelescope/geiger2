@@ -3,11 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "sim:hv": "tsci simulate analog sim/hv/hv.circuit.tsx --disable-parts-engine",
+    "sim:hv": "bun --preload ./scripts/compact-tsci-output.ts ./node_modules/tscircuit/cli.mjs simulate analog sim/hv/hv.circuit.tsx --disable-parts-engine",
     "sim:native": "python3 scripts/simulate_hv.py",
     "sim:sync": "python3 scripts/sync_spice_model.py",
     "render:concept": "blender --background --python scripts/render_concept.py",
-    "build:schematic": "tsci build board/hv-ladder.circuit.tsx --disable-pcb --disable-parts-engine --schematic-svgs"
+    "build:schematic": "tsci build board/hv-ladder.circuit.tsx --disable-pcb --disable-parts-engine --schematic-svgs",
+    "sim:hv:plain": "tsci simulate analog sim/hv/hv.circuit.tsx --disable-parts-engine",
+    "check:schematic": "python3 scripts/check_hv_schematic.py",
+    "sim:plots": "python3 scripts/analyze_tsci.py"
   },
   "dependencies": {
     "circuit-json": "0.0.491",

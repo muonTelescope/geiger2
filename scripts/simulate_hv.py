@@ -45,6 +45,7 @@ with (OUT/'results.csv').open('w') as f:
     w=csv.DictWriter(f,fieldnames=metrics[0]); w.writeheader(); w.writerows(metrics)
 def save(fig,name):
     fig.savefig(OUT/f'{name}.png',dpi=180,bbox_inches='tight'); fig.savefig(OUT/f'{name}.svg',bbox_inches='tight'); plt.close(fig)
+    p=OUT/f'{name}.svg'; p.write_text('\n'.join(line.rstrip() for line in p.read_text().splitlines())+'\n')
 fig,ax=plt.subplots(2,1,figsize=(10,7),layout='constrained')
 for v,c in zip((1.8,2.4,3.2),('#2563eb','#059669','#d97706')):
     x=waves[f'v{v:g}_load1']; ax[0].plot(x[:,0]*1e3,x[:,1],color=c,label=f'{v:g} V battery'); idx=x[:,0]>=.25; ax[1].plot(x[idx,0]*1e3,x[idx,1],color=c)

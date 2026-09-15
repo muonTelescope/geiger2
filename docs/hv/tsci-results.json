@@ -1,0 +1,20 @@
+{
+  "engine": "tsci simulate analog / WebAssembly ngspice",
+  "tscircuit": "0.0.2562",
+  "eecircuit_engine": "1.7.4 (CLI-selected)",
+  "points": 849452,
+  "duration_s": 0.15,
+  "measurement_window_s": [
+    0.1,
+    0.15
+  ],
+  "startup_396_ms": 47.02039,
+  "hv_mean": 399.26676600260004,
+  "hv_min": 394.0506,
+  "hv_max": 402.1119,
+  "peak_switch_v": 103.0913,
+  "input_mA": 0.8660819976812486,
+  "limitations": "Generic switch/diodes; behavioral controller; no controller or drive supply current. See README.",
+  "native_startup_396_ms_sampled": 47.230000000000004,
+  "startup_difference_ms": 0.20961000000000496
+}

@@ -14,7 +14,7 @@ Prior art: [wirelessGeigerCounter](https://github.com/sawaiz/wirelessGeigerCount
 parallel CTC-5 and 2×AA, plus an RF reservation at one end. The tube, contacts and
 HV components are stand-ins; [model provenance and views](cad/README.md).
 
-![HV simulation](docs/hv/startup.png)
+![tscircuit HV simulation](docs/hv/tsci-comparison.png)
 
 The exploratory HV model regulates near 400 V at a 1 µA external load across
 1.8–3.2 V input. A permanently connected divider adds about 3 µA load. Real switch
@@ -22,6 +22,7 @@ drive, controller current and device losses still need validation.
 
 - [HV calculations, plots, assumptions and reproduction](docs/hv/README.md)
 - [JLC component selection and unresolved electrical checks](docs/component-selection.md)
+- [HV ladder schematic](docs/hv/ladder-schematic.svg) · [verified tscircuit result](docs/hv/tsci-results.json)
 - [Battery/load sweep](docs/hv/load-sweep.png) · [energy trade-offs](docs/hv/tradeoffs.png)
 - [Top view](cad/renders/top.png) · [tube view](cad/renders/tube.png) · [profile](cad/renders/profile.png)
 - [Download concept 3D model](cad/renders/geiger2-concept.glb)
@@ -89,6 +90,6 @@ manufacturing/    JLCPCB BOM/CPL when ready
 - MCU + pin budget locked; product locks (GATT, handheld shell, tube‖AA layout) documented
 - 3D assets staged under `cad/models/` for board renders
 - 16 native ngspice feasibility cases, plots and reproducible scripts generated
-- tscircuit analog simulation and HV ladder schematic source added
+- tscircuit WASM simulation verified; HV ladder schematic matches SPICE connectivity
 - Four Blender mechanical concept views and GLB generated
 - Complete MCU/RF/HV schematic, real switch drive, routing and fabrication release remain open

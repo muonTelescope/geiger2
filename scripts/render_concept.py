@@ -68,7 +68,7 @@ for loc,power,size in [((0,-80,150),500000,130),((-90,50,100),350000,100),((110,
  bpy.ops.object.light_add(type='AREA',location=loc);l=bpy.context.object;l.data.energy=power;l.data.shape='DISK';l.data.size=size;l.rotation_euler=(Vector((0,0,4))-l.location).to_track_quat('-Z','Y').to_euler()
 bpy.ops.object.camera_add();camera=bpy.context.object;bpy.context.scene.camera=camera;camera.data.clip_end=5000;camera.data.lens=52
 scene=bpy.context.scene;scene.render.engine='CYCLES';scene.cycles.samples=48;scene.cycles.use_denoising=True;scene.render.resolution_x=1500;scene.render.resolution_y=900;scene.render.resolution_percentage=100;scene.view_settings.view_transform='AgX';scene.render.image_settings.file_format='PNG'
-for name,loc,target in [('hero',(135,-155,145),(0,0,5)),('top',(0,-50,225),(0,0,3)),('tube',(-110,115,80),(-12,7,7)),('profile',(20,-200,48),(0,0,6))]:
+for name,loc,target in [('hero',(135,-155,145),(0,0,5)),('top',(0,-50,225),(0,0,3)),('tube',(-140,145,105),(-12,7,7)),('profile',(20,-255,62),(0,0,6))]:
  camera.location=loc;camera.rotation_euler=(Vector(target)-camera.location).to_track_quat('-Z','Y').to_euler();scene.render.filepath=str(O/f'{name}.png');bpy.ops.render.render(write_still=True)
 bpy.ops.wm.save_as_mainfile(filepath=str(R/'build/geiger2-concept.blend'))
 (O/'manifest.json').write_text(json.dumps({'status':'mechanical concept; no routed PCB or DRC certification','board_envelope_mm':[140,48,1.6],'tube_envelope_mm':[110,12],'aa_envelope_mm':[50.5,14.5],'fallbacks':['CTC-5 cylinder','AA bodies','battery contacts','tube supports','HV parts envelopes'],'source_mesh':'cad/models/NRF52832-QFAA-C77540.obj','views':['hero','top','tube','profile']},indent=2)+'\n')

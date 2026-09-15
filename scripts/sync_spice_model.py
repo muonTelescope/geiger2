@@ -6,8 +6,6 @@ root=Path(__file__).resolve().parents[1]
 s=(root/'sim/hv/converter.cir').read_text().split('.control')[0]
 lines=s.splitlines()[1:]
 lines=[x for x in lines if not x.startswith(('Vbat ','.options'))]
-s='\n'.join(lines)
-s=re.sub(r'\b0\b','GND',s) if False else s
 # Only replace node token 0, never a parameter value or behavioral constant.
 output=[]
 node_counts={'R':2,'C':2,'L':2,'D':2,'S':4,'V':2,'B':2}
