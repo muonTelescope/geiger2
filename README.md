@@ -15,7 +15,7 @@ informs requirements; it is not a port. See [docs/prior-art.md](docs/prior-art.m
 | MCU / radio | nRF52 (or similar Nordic BLE SoC) — real BLE advertising, not nRF24 fakery |
 | Detector | CTC-5 / STS-5 halogen-quenched GM tube (NOS Russian), same marking as stock on hand |
 | HV | Regulated bias + **ADC readback** of tube voltage (fix the open-loop V6 gap) |
-| Fab | JLCPCB **2-layer** FR4; DRC/settings copied from [x.drop beacon](../enzo/x.drop-beacon) — [docs/jlcpcb-drc.md](docs/jlcpcb-drc.md) |
+| Fab | JLCPCB **2-layer** FR4; DRC from x.drop beacon **0.8.6 JLC-preferred** pack (not git master) — [docs/jlcpcb-drc.md](docs/jlcpcb-drc.md) |
 | Firmware | BLE advertise CPM (and HV telemetry when useful); count pulses in hardware interrupt / PPI |
 
 ## Tube (CTC-5 / STS-5)
@@ -68,5 +68,5 @@ Match x.drop beacon order defaults unless we document a change:
 
 ## Status
 
-Bootstrap: README, prior-art extract, JLCPCB DRC seed. Schematic / layout /
-firmware not started yet.
+Bootstrap: README, prior-art extract, JLCPCB DRC seed (beacon 0.8.6 mins).
+Schematic / layout / firmware not started yet.

@@ -1,11 +1,15 @@
 (version 1)
-# Copied/adapted from ~/enzo/x.drop-beacon/pcb/beacon.kicad_dru
-# Target fab: JLCPCB FR4, 2-layer, 1 oz copper.
-# General 6 mil (0.1524 mm) floor — above JLCPCB's 0.10 mm limit for 1 oz two-layer.
+# JLCPCB 2-layer preferred mins — from x.drop-beacon Downloads 0.8.6 pack
+# (NOT git master .kicad_pro, which still has the older 6 mil / 0.5 mm silk set).
+# Source: /Users/sawaiz/Downloads/x.drop-beacon-0.8.6/pcb/beacon.kicad_pro
+#
+# Prefer these over absolute fab minimums. Do not use 0.35/0.2 signal vias
+# (JLC 4-wire Kelvin surcharge). Thermal vias ≥ 0.45 pad / 0.2 drill.
+# Signal vias 0.6/0.3.
 
 (rule "Normal routing minimum"
- (constraint track_width (min 0.1524mm))
- (constraint connection_width (min 0.1524mm)))
+ (constraint track_width (min 0.15mm))
+ (constraint connection_width (min 0.15mm)))
 
 # Unpopulated parts: keep solder-mask access, no stencil paste.
 (rule "No paste on DNP components"
