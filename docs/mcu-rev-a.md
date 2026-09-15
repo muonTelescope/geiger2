@@ -76,3 +76,9 @@ User asked for `~/agent-skills`. That path did not exist; linked to `~/.codex/sk
 - **BLE:** advertising **plus** connectable GATT (config/telemetry), not ads-only.
 - **Mechanics:** closed plastic **handheld shell** — antenna keepout must account for hand and enclosure; shell CAD later.
 - **Defaults:** status LED only; raw CPM in ads/GATT (µSv/h later); alkaline 2×AA floor; TC2030-style SWD.
+
+## Antenna simulation milestone
+
+Run [openEMS antenna analysis](antenna-simulation.md) after PCB layout and closed-case
+design are finalized, including the tube, AA cells and contacts. Final RF matching
+requires assembled-case measurement after simulation.

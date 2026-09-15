@@ -1,0 +1,41 @@
+{
+  "conditions": {
+    "vbat_V": 2.4,
+    "external_load_uA": 1,
+    "measurement_window_s": [
+      0.1,
+      0.15
+    ],
+    "peak_window_s": [
+      0,
+      0.15
+    ]
+  },
+  "native": {
+    "startup_396_ms": 46.8203554,
+    "hv_mean_V": 399.3031640673517,
+    "hv_min_V": 397.574126,
+    "hv_max_V": 402.117608,
+    "hv_ripple_pp_V": 4.54348200000004,
+    "battery_mean_mA": 0.8365839857223184,
+    "switch_peak_first_150ms_V": 103.106851
+  },
+  "tscircuit_wasm": {
+    "startup_396_ms": 47.02039,
+    "hv_mean_V": 399.26685475899984,
+    "hv_min_V": 394.0506,
+    "hv_max_V": 402.1119,
+    "hv_ripple_pp_V": 8.061300000000017,
+    "battery_mean_mA": 0.8659186563580243,
+    "switch_peak_first_150ms_V": 103.0913
+  },
+  "wasm_minus_native": {
+    "startup_396_ms": 0.20003460000000217,
+    "hv_mean_V": -0.036309308351860636,
+    "hv_min_V": -3.523526000000004,
+    "hv_max_V": -0.005708000000026914,
+    "hv_ripple_pp_V": 3.517817999999977,
+    "battery_mean_mA": 0.02933467063570594,
+    "switch_peak_first_150ms_V": -0.015551000000002091
+  }
+}

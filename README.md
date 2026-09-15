@@ -21,6 +21,8 @@ The exploratory HV model regulates near 400 V at a 1 µA external load across
 drive, controller current and device losses still need validation.
 
 - [HV calculations, plots, assumptions and reproduction](docs/hv/README.md)
+- [Native/WASM comparison and discrepancy analysis](docs/hv/solver-comparison.md) — both simulation paths retained
+- [Planned openEMS antenna analysis after PCB and enclosure design](docs/antenna-simulation.md)
 - [JLC component selection and unresolved electrical checks](docs/component-selection.md)
 - [HV ladder schematic](docs/hv/ladder-schematic.svg) · [verified tscircuit result](docs/hv/tsci-results.json)
 - [Battery/load sweep](docs/hv/load-sweep.png) · [energy trade-offs](docs/hv/tradeoffs.png)

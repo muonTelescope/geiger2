@@ -91,6 +91,9 @@ That macro's SOIC footprint is only a simulation placeholder, not a physical
 HV module or an assembly part. The separate detailed ladder drawing below is
 checked against the same source netlist.
 
+Both simulation paths are retained. See the [aligned-window comparison](solver-comparison.md)
+for ripple/current differences and the remaining convergence work.
+
 ## HV ladder review schematic
 
 ![tscircuit HV ladder schematic](ladder-schematic.png)
@@ -144,7 +147,8 @@ python3 scripts/analyze_tsci.py  # validate CLI data and regenerate comparison p
 bun run build:schematic
 python3 scripts/check_hv_schematic.py
 rsvg-convert -w 2400 dist/board/hv-ladder/schematic.svg -o docs/hv/ladder-schematic.png
-python3 scripts/simulate_hv.py   # supplemental native ngspice sweep + plots
+python3 scripts/simulate_hv.py   # retained native ngspice sweep + plots
+bun run sim:compare             # both runs, identical 100–150 ms metrics
 ```
 
 `sim:hv` invokes the installed tscircuit CLI with a small Bun preload that saves

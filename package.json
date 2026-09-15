@@ -10,7 +10,8 @@
     "build:schematic": "tsci build board/hv-ladder.circuit.tsx --disable-pcb --disable-parts-engine --schematic-svgs",
     "sim:hv:plain": "tsci simulate analog sim/hv/hv.circuit.tsx --disable-parts-engine",
     "check:schematic": "python3 scripts/check_hv_schematic.py",
-    "sim:plots": "python3 scripts/analyze_tsci.py"
+    "sim:plots": "python3 scripts/analyze_tsci.py",
+    "sim:compare": "python3 scripts/compare_solvers.py"
   },
   "dependencies": {
     "circuit-json": "0.0.491",

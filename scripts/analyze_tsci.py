@@ -21,8 +21,8 @@ hit=np.flatnonzero(x[:,1]>=396)
 assert len(hit), 'HV never reached 396 V'
 metrics={'engine':'tsci simulate analog / WebAssembly ngspice','tscircuit':json.loads((R/'node_modules/tscircuit/package.json').read_text())['version'],'eecircuit_engine':'1.7.4 (CLI-selected)','points':len(x),'duration_s':float(t[-1]),'measurement_window_s':[.1,.15],'startup_396_ms':float(t[hit[0]]*1000),'hv_mean':avg(final[:,1]),'hv_min':float(final[:,1].min()),'hv_max':float(final[:,1].max()),'peak_switch_v':float(x[:,3].max()),'input_mA':avg(-final[:,4])*1000,'limitations':'Generic switch/diodes; behavioral controller; no controller or drive supply current. See README.'}
 ref=np.load(O/'v2.4_load1.npz')['wave']; refhit=np.flatnonzero(ref[:,1]>=396)
-metrics['native_startup_396_ms_sampled']=float(ref[refhit[0],0]*1000)
-metrics['startup_difference_ms']=abs(metrics['startup_396_ms']-metrics['native_startup_396_ms_sampled'])
+metrics['native_startup_396_ms']=next(c['startup_ms'] for c in json.loads((O/'results.json').read_text())['cases'] if c['case']=='v2.4_load1')
+metrics['startup_difference_ms']=abs(metrics['startup_396_ms']-metrics['native_startup_396_ms'])
 assert 390<metrics['hv_mean']<410 and metrics['hv_min']>=360 and metrics['hv_max']<=440,metrics
 assert metrics['startup_difference_ms']<5,metrics
 (O/'tsci-results.json').write_text(json.dumps(metrics,indent=2)+'\n')
